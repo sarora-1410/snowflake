@@ -79,16 +79,4 @@ ALTER TASK ANALYTICS.FLAG_NEW_TRANSACTIONS SUSPEND;
 ALTER DYNAMIC TABLE ANALYTICS.CUSTOMER_RISK_SUMMARY SUSPEND;
 ```
 
-## Limitations
-
-- Synthetic data with only two planted patterns; fraud rules are simple thresholds, not a trained model.
-- Fraud information is flattened into one transaction view, so the Semantic View has two logical tables rather than a full star schema.
-- Built and tested in a Snowflake trial account. Semantic View and Cortex Analyst features change between releases, so syntax may need small updates.
-
-## Possible next steps
-
-- Circular transfer detection with a recursive CTE
-- Impossible-travel and shared-device rules
-- SCD Type 2 history for customer risk bands
-- A second Semantic View for customer risk
-- Query Profile review and performance tuning
+ormance tuning
